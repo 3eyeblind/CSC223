@@ -1,16 +1,15 @@
 import random
 import time
 
-# If your file name is algorithms.py, change the import accordingly.
 from search_algorithms import (
     recursive_binary_search,
     iterative_binary_search,
     sequential_search,
 )
 
-# ---------------------------
-# Part 1 – Small deterministic tests
-# ---------------------------
+
+# Part 1 
+
 def run_part1():
     print("=" * 72)
     print("PART 1 – Small Test with Present and Absent Targets")
@@ -49,12 +48,10 @@ def run_part1():
     print(f"Sequential : {target_absent} -> "
           f"{'found at index ' + str(idx) if idx != -1 else 'not found'}")
 
-    print()  # spacing
+    print()  
 
 
-# ---------------------------
-# Part 2 – Random numbers (small N) with success/failure cases
-# ---------------------------
+# Part 2 
 def run_part2(seed: int = 1337):
     print("=" * 72)
     print("PART 2 – Random Numbers (Small N)")
@@ -83,9 +80,7 @@ def run_part2(seed: int = 1337):
     print()  # spacing
 
 
-# ---------------------------
-# Part 3 – Measure and compare runtime growth (averages over 10 runs)
-# ---------------------------
+# Part 3
 def time_call_us(func, *args, **kwargs) -> float:
     """Return elapsed time in microseconds for a single function call."""
     start = time.perf_counter()
@@ -134,10 +129,7 @@ def run_part3(seed: int = 4242):
 
         print(f"{N:12d} | {avg_rbs:20.2f} | {avg_ibs:18.2f} | {avg_seq:16.2f}")
 
-    print()  # spacing
-    print("Note: microsecond (µs) averages printed for each N (10 trials per size).")
-    print()
-
+    
 
 def main():
     # Part 1
